@@ -1,0 +1,22 @@
+{
+  "name": "pet-foster-board",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node server.js",
+    "heroku-postbuild": "cd frontend/ && npm install && npm run build"
+  },
+  "keywords": [],
+  "author": "Josh Zalcman",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.13",
+    "serve-favicon": "^2.5.0"
+  }
+}
