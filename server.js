@@ -3,6 +3,7 @@ const path = require('path');
 const express = require('express');
 const mongoose = require('mongoose');
 require('dotenv').config();
+const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3001;
 const seed = require('./models/seeder');
@@ -25,6 +26,7 @@ db.on('connected', () => console.log('mongo connected'));
 db.on('disconnected', () => console.log('mongo disconnected'));
 
 //Middleware
+app.use(cors());
 app.use(express.json());
 const verifyToken = require('./middleware/verfiyToken');
 
